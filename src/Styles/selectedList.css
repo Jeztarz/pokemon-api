@@ -1,0 +1,13 @@
+.selected-list-container {
+    background-color: var(--background-color-window);
+    padding: 7px 15px;
+    border-radius: 20px;
+    width: 370px;
+}
+
+.select-menu {
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+}

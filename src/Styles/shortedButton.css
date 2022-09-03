@@ -1,0 +1,5 @@
+.shorted-container {
+    background-color: var(--background-color-window);
+    padding: 7px 15px;
+    border-radius: 20px;
+}
