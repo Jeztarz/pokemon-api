@@ -3,6 +3,7 @@
     padding: 7px 15px;
     border-radius: 20px;
     width: 370px;
+    
 }
 
 .select-menu {
@@ -10,4 +11,6 @@
     border: none;
     width: 100%;
     font-size: 18px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
 }

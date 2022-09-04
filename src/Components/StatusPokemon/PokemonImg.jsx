@@ -1,13 +1,21 @@
 import '../../Styles/statusPokemon.css';
 
-function PokemonImg({pokemon}) {
+function PokemonImg({ data }) {
 
 
     return (
-        <div className="pokemon">
-            
-            {/* <img src={pokemon.sprites.front_default} alt='' /> */}
-        </div>
+
+        <>
+            {(!data) ? (
+                <></>
+            ) : (
+                <div className="pokemon">
+                    <img src={data.sprites.other.home.front_default} alt={data.name} />
+                </div>
+
+            )}
+        </>
+
     )
 }
 

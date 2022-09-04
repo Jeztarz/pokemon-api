@@ -1,10 +1,10 @@
 import  '../../Styles/windowList.css'
 import CardList from './CardList'
 
-function WindowList({ pokemon, loading }) {
+function WindowList({ pokemon, infoPokemon }) {
     return (
         <div className='window-list-container'>
-            <CardList pokemon={pokemon} loading={loading} />
+            <CardList pokemon={pokemon} infoPokemon={infoPokemon} />
         </div>
     )
 }

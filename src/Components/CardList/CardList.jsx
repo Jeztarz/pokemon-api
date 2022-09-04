@@ -1,26 +1,30 @@
 import '../../Styles/cardList.css'
 
-function CardList({ pokemon, loading }) {
+function CardList({ pokemon, infoPokemon }) {
 
     return (
         <>
 
-            {loading ? <h1>Loading...</h1> :
-                pokemon.map((item) => {
+            
+                {pokemon.map((pokemonList) => {
                     return (
                         <>
-                            <div className="cardList-container" key={item.id}>
-                                <img src={item.sprites.front_default} alt="" />
+                            <div className="cardList-container" 
+                                key={pokemonList.id} 
+                                onClick ={()=> infoPokemon(pokemonList)}
+                                >
+                                <p>#{pokemonList.id}</p>
+                                <img src={pokemonList.sprites.front_default} alt={pokemonList.name} />
 
                                 <div className="cardList-tag-name">
-                                    {item.name}
+                                    {pokemonList.name}
                                 </div>
                             </div>
                         </>
                     )
                 })}
 
-                
+
             {/* {pokemon.map((poke) => {
             return (
             <div className="cardList-container"

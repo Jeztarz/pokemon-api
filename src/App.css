@@ -48,15 +48,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .first-column {
   width: -moz-fit-content;
   width: fit-content;
 }
+
 .button-shorted {
   display: flex;
   justify-content: space-between;
 }
-
