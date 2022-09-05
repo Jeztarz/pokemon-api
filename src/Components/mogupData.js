@@ -89,7 +89,7 @@ export const element = [
          id: 17,
          element: "water",
          value: "water"
-     }
+     },
  ];
  
  export default element;

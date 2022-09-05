@@ -16,7 +16,6 @@ function FilterCard({ typeFilter }) {
                                 value={element.value}
                                 style={{ backgroundColor: typeColors[ element.element ] }}
                                 onClick={typeFilter}
-                                
                             >
                                 {element.element[ 0 ].toUpperCase() + element.element.substring(1)}
                             </button>
@@ -24,6 +23,10 @@ function FilterCard({ typeFilter }) {
                     })
                 }
             </div>
+            <button 
+                value="all"
+                onClick={typeFilter}
+                >Show All</button>
         </div>
     )
 }

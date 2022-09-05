@@ -13,19 +13,25 @@ import StatusPokemon from "./Components/StatusPokemon/StatusPokemon";
 
 function App() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
-  const [pokeData, setPokeData] = useState([]);
   const [pokeDex, setPokeDex] = useState();
-
-
+  const [pokeData, setPokeData] = useState([]);
+  const [getPokemonAll, setPokemonAll] = useState([]);
+// console.log(getPokemonAll)
   // get data from url
   const pokeFun = async () => {
-    const res = await axios.get(url + "?limit=100");
+    const res = await axios.get(url + "?limit=500");
     getPokemon(res.data.results);
   };
 
   const getPokemon = async (res) => {
     res.map(async (item) => {
       const result = await axios.get(item.url);
+      setPokemonAll((state) => {
+        state = [...state, result.data];
+        state.sort((a, b) => (a.id > b.id ? 1 : -1));
+        return state;
+      });
+
       setPokeData((state) => {
         state = [...state, result.data];
         state.sort((a, b) => (a.id > b.id ? 1 : -1));
@@ -38,42 +44,39 @@ function App() {
     pokeFun();
   }, [url]);
 
-
-
   // modal
   const [openModal, setOpenModal] = useState(false);
-// console.log(openModal);
+  // console.log(openModal);
 
-
-// console.log(pokeData.filter(pokeData => (pokeData.types.type.name !== undefined)))
-const typeFilter = (e) => {
-  console.log(e.target.value)
-  if (e.target.value === 'bug') {
-    console.log('this bug')
-  } else {
-    console.log('not bug')
-  }
-
-
-  return setOpenModal(false)
-};
+  // filter pokemon by elements
+  const typeFilter = (e) => {
+    const filterElement = getPokemonAll.filter((pokemonElementFilter) => {
+      return (pokemonElementFilter.types.find((type) => type.type.name === e.target.value) !== undefined);
+    });
+    setPokeData(filterElement)
+    
+    return setOpenModal(false);
+  };
 
   // dropdown menu for list items
   const optionSelected = (e) => {
     setPokeData((data) => {
       const dataToSort = [...data];
-      if (e.target.value === "byName") {
-        dataToSort.sort((a, b) => (a.name > b.name ? 1 : -1));
-        return dataToSort;
-      } else if (e.target.value === "byId") {
-        dataToSort.sort((a, b) => (a.id > b.id ? 1 : -1));
-        return dataToSort;
-      } else if (e.target.value === "byWeight") {
-        dataToSort.sort((a, b) => (a.weight > b.weight ? 1 : -1));
-        return dataToSort;
-      } else if (e.target.value === "byHeight") {
-        dataToSort.sort((a, b) => (a.height > b.height ? 1 : -1));
-        return dataToSort;
+      switch (e.target.value) {
+        case "byName":
+          dataToSort.sort((a, b) => (a.name > b.name ? 1 : -1));
+          return dataToSort;
+        case "byId":
+          dataToSort.sort((a, b) => (a.id > b.id ? 1 : -1));
+          return dataToSort;
+        case "byWeight":
+          dataToSort.sort((a, b) => (a.weight > b.weight ? 1 : -1));
+          return dataToSort;
+        case "byHeight":
+          dataToSort.sort((a, b) => (a.height > b.height ? 1 : -1));
+          return dataToSort;
+        default:
+          console.log("errors");
       }
     });
   };
@@ -88,8 +91,6 @@ const typeFilter = (e) => {
       }
     });
   };
-
-  
 
   return (
     <div>

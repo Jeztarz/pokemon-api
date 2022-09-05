@@ -4,7 +4,6 @@
     background-color: var(--color-card-list);
     border-radius: 8px;
     display: flex;
-    justify-content: center;
     position: relative;
     cursor: pointer;
     -webkit-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.1);
