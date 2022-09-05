@@ -27,5 +27,5 @@ this picture example from my pokedex website :)
 <br>
 thank you for visited
 <br>
-<img src="https://www.img.in.th/images/6e25b45442283f50282e415f1bea7ad5.jpg">
-<img src="https://www.img.in.th/images/42b6778daedc6c1bc09c31e9601ad8ad.jpg">
+<img src="https://www.img.in.th/images/e0aa26314f2d6c8675257157b755049f.jpg">
+<img src="https://www.img.in.th/images/aeb6830413ce2c754f9e8018abb9a264.jpg">
