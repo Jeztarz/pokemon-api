@@ -45,7 +45,7 @@ function App() {
 // console.log(openModal);
 
 
-// console.log(pokeData.filter(pokeData => (pokeData.weight > 1000)))
+// console.log(pokeData.filter(pokeData => (pokeData.types.type.name !== undefined)))
 const typeFilter = (e) => {
   console.log(e.target.value)
   if (e.target.value === 'bug') {
@@ -53,22 +53,7 @@ const typeFilter = (e) => {
   } else {
     console.log('not bug')
   }
-  
 
-
-
-
-
-
-
-  // setPokeData((pokeFilter) => {
-  //   const filterPoke = [...pokeFilter];
-  //   if (e.target.value === 'bug') {
-  //     filterPoke.filter(filterPoke => filterPoke.types.types.name);
-  //     return filterPoke;
-  //   }
-  //   return setOpenModal(false)
-  // });
 
   return setOpenModal(false)
 };

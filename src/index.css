@@ -13,5 +13,7 @@ body {
   background-image: url('../public/bg.png');
   display: flex;
   justify-content: center;
+
+  
 }
 

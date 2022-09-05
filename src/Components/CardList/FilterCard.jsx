@@ -4,7 +4,7 @@ import typeColors from '../../Styles/typeColor'
 
 function FilterCard({ typeFilter }) {
     return (
-        <div className='type-card-container'>
+        <div className='type-card-container blur-in'>
             <p>Element</p>
 
             <div className='type-card-content'>

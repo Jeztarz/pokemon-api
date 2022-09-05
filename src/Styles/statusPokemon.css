@@ -22,18 +22,100 @@
     }
 }
 
+.textWelcomes {
+    animation:vibrate 1.5s infinite linear both
+}
+@keyframes vibrate{
+    0%{transform:translate(0)}
+    20%{transform:translate(-2px,2px)}
+    40%{transform:translate(-2px,-2px)}
+    60%{transform:translate(2px,2px)}
+    80%{transform:translate(2px,-2px)}
+    100%{transform:translate(0)}}
 
 
-.status-pokemon {
+.status-pokemon-info {
+    width: 355px;
+    border-radius: 15px;
+    background-color: var(--background-color-window);
+    padding: 0 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
+    box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
+    animation:scale-up-horizontal-right 0.6s;
+    
+}
+@keyframes scale-up-horizontal-right{
+    0%{transform:scaleX(.4);transform-origin:right center}
+    100%{transform:scaleX(1);transform-origin:right center}
+}
+
+
+
+.status-pokemon-info_name {
+    display: flex;
+    justify-content: space-evenly;
+    width: 375px;
+    background-color: rgba(10, 10, 10, 0.336);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.status-pokemon-info_weight {
+    padding: 0;
+    margin: -10px 0 -20px 0;
+}
+
+.status-pokemon-info_element {
+    display: flex;
+}
+
+.status-pokemon-info_ability {
+    text-align: center;
+    height: 155px;
+    width: 375px;
+}
+.status-pokemon-info_ability h3{
+    background-color: rgba(10, 10, 10, 0.336);
+    padding: 10px 0;
+    margin: 5px 0 -8px 0;
+}
+
+.status h3 {
+    text-align: center;
+    background-color: rgba(10, 10, 10, 0.336);
+    padding: 10px 0;
+    margin: 5px 0 -8px 0;
+    width: 375px;
+}
+
+.status-pokemon-info_status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.status-pokemon-info_status h4 {
+    text-align: right;
+    padding: 0 0 0 40px;
+}
+.status-pokemon-info_status h5 {
+    text-align: left;
+    padding: 0 0 0 25px;
 }
 
 .type-color {
     width: -moz-fit-content;
     width: fit-content;
     padding: 8px 15px;
+    margin: 7px 10px 0 0;
     border-radius: 18px;
     border: 1px solid var(--color-main);
     font-size: 15px;
 }
+
+

@@ -13,4 +13,8 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     position: relative;
+   
+    -webkit-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
+    box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.2);
 }

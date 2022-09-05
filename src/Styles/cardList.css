@@ -7,6 +7,19 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
+    -webkit-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.1);
+    box-shadow: 11px 10px 14px 1px rgba(0,0,0,0.1);
+}
+
+.cardList-container :hover {
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.03);
+}
+
+.cardList-container :active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.98)
 }
 
 .cardList-container p {
