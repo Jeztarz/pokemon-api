@@ -23,7 +23,7 @@ function FilterCard({ typeFilter }) {
                     })
                 }
             </div>
-            <button 
+            <button className='show-all'
                 value="all"
                 onClick={typeFilter}
                 >Show All</button>

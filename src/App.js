@@ -54,6 +54,10 @@ function App() {
       return (pokemonElementFilter.types.find((type) => type.type.name === e.target.value) !== undefined);
     });
     setPokeData(filterElement)
+
+    if (e.target.value === "all") {
+      return setPokeData(getPokemonAll), setOpenModal(false);
+    }
     
     return setOpenModal(false);
   };
