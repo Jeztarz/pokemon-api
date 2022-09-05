@@ -10,19 +10,19 @@ function SelectedList({sortBy}) {
             <select className="select-menu" onChange={sortBy}>
 
                 <option value="byId">
-                    เรียงตามหมายเลขประจำตัว
+                sort by ID
                 </option>
 
                 <option value="byName" >
-                    เรียงตามชื่อจากตัวอักษร
+                sort by name
                 </option>
 
                 <option value="byWeight">
-                    เรียงตามน้ำหนัก
+                sort by weight
                 </option>
 
                 <option value="byHeight">
-                    เรียงตามส่วนสูง
+                sort by height
                 </option>
 
             </select>
