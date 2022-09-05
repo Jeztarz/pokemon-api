@@ -43,14 +43,11 @@
 
 
 .App {
-  background-image: url('../public/bg.png');
   padding: 25px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .first-column {
@@ -62,3 +59,4 @@
   display: flex;
   justify-content: space-between;
 }
+

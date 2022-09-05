@@ -1,10 +1,10 @@
 import '../../Styles/shortedButton.css'
 
-function ShortedButton() {
+function ShortedButton({toggleTime}) {
     return (
-        <div className="shorted-container">
+        <button className="shorted-container" onClick={toggleTime}>
             <img src='./shorted.png' alt='shorted' style={{width: '25px'}} />
-        </div>
+        </button>
     )
 }
 

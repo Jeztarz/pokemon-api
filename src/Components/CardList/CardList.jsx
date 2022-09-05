@@ -1,16 +1,13 @@
 import '../../Styles/cardList.css'
 
-function CardList({ pokemon, infoPokemon }) {
-
+function CardList({ pokemon, infoPokemon}) {
     return (
         <>
-
-            
-                {pokemon.map((pokemonList) => {
+              {pokemon.map((pokemonList) => {
                     return (
-                        <>
+                        
                             <div className="cardList-container" 
-                                key={pokemonList.id} 
+                                key={pokemonList.id}
                                 onClick ={()=> infoPokemon(pokemonList)}
                                 >
                                 <p>#{pokemonList.id}</p>
@@ -20,23 +17,9 @@ function CardList({ pokemon, infoPokemon }) {
                                     {pokemonList.name}
                                 </div>
                             </div>
-                        </>
+                        
                     )
                 })}
-
-
-            {/* {pokemon.map((poke) => {
-            return (
-            <div className="cardList-container"
-            key={poke.name}
-            > 
-                <img src={poke.sprites.front_default} alt={pokemon.name} />
-                <div className="cardList-tag-name">
-                    {poke.name}
-                </div>
-            </div>
-            )
-          })} */}
         </>
 
     )

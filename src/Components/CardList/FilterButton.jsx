@@ -1,10 +1,11 @@
 import '../../Styles/filterButton.css';
 
-function FilterButton() {
+function FilterButton({ modal }) {
     return (
-        <div className="select-type-button-container">
-            <img src='./filter.png' alt='filter' style={{width: '25px'}} />
-        </div>
+        <button className="select-type-button-container"
+            onClick={() => modal(true)}>
+            <img src='./filter.png' alt='filter' style={{ width: '25px' }} />
+        </button>
     )
 }
 

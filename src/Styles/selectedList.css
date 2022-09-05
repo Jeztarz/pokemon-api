@@ -3,6 +3,7 @@
     padding: 7px 15px;
     border-radius: 20px;
     width: 370px;
+    cursor: pointer;
     
 }
 
@@ -13,4 +14,5 @@
     font-size: 18px;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 600;
+    cursor: pointer;
 }

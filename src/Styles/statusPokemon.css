@@ -1,4 +1,39 @@
 .pokemon img {
     width: 420px;
     margin: 0 20px;
+    animation: pokeImg 3s infinite linear;
+}
+
+@keyframes pokeImg {
+    0% {
+        transform:  scale(1) translate(-5%, 5%);
+    }
+    30% {
+        transform:  translate(10%, -10%);
+    }
+    50% {
+        transform:  scale(1.1);
+    }
+    75% {
+        transform:  translate(-10%, 10%);
+    }
+    100% {
+        transform:  scale(1) translate(-5%, 5%);
+    }
+}
+
+
+
+.status-pokemon {
+    display: flex;
+    flex-direction: row;
+}
+
+.type-color {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 8px 15px;
+    border-radius: 18px;
+    border: 1px solid var(--color-main);
+    font-size: 15px;
 }
