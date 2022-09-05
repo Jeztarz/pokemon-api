@@ -31,3 +31,9 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.select-menu option {
+    border: none;
+    background-color: rgba(233, 233, 233, 0.24);
+    font-family: 'Chakra Petch', sans-serif;
+}
