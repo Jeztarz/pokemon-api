@@ -1,6 +1,6 @@
 # Pokedex !
 <br>
-demo : https://jeztar-pokedex.herokuapp.com/
+demo : https://pokeapi-by-lalin.vercel.app/
 <br>
 <br>
 About this project :
@@ -27,5 +27,10 @@ this picture example from my pokedex website :)
 <br>
 thank you for visited
 <br>
-<img src="https://www.img.in.th/images/e0aa26314f2d6c8675257157b755049f.jpg">
-<img src="https://www.img.in.th/images/aeb6830413ce2c754f9e8018abb9a264.jpg">
+<img src="https://sv1.img.in.th/WMvbp.jpeg">
+<img src="https://sv1.img.in.th/WMwm5.jpeg">
+<img src="https://sv1.img.in.th/WMAC7.jpeg">
+
+
+
+
