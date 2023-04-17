@@ -11,8 +11,8 @@ import WindowList from "./Components/CardList/WindowList";
 import PokemonImg from "./Components/StatusPokemon/PokemonImg";
 import StatusPokemon from "./Components/StatusPokemon/StatusPokemon";
 
-import MessengerCustomerChat from 'react-messenger-chat-plugin'
 
+import { MessengerChat } from "react-messenger-chat-plugin";
 function App() {
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon");
   const [pokeDex, setPokeDex] = useState();
@@ -101,7 +101,7 @@ function App() {
   return (
     <div>
       <div>
-        <MessengerCustomerChat
+        <MessengerChat
           pageId="105496835796176"
           appId="502170539988549"
           />
