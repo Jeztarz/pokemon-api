@@ -100,14 +100,8 @@ function App() {
 
   return (
     <div>
-      
+      <MessengerChat pageId="105496835796176" />
       <div className="App">
-      <div>
-        <MessengerChat
-          pageId="105496835796176"
-          appId="502170539988549"
-          />
-       </div>
         <div className="first-column">
           <div className="button-shorted">
             <FilterButton modal={setOpenModal} />
