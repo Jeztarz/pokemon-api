@@ -102,7 +102,12 @@ function App() {
     <div>
       
       <div className="App">
-       
+      <div>
+        <MessengerChat
+          pageId="105496835796176"
+          appId="502170539988549"
+          />
+       </div>
         <div className="first-column">
           <div className="button-shorted">
             <FilterButton modal={setOpenModal} />
@@ -128,12 +133,7 @@ function App() {
       </div>
 
 
-      <div>
-        <MessengerChat
-          pageId="105496835796176"
-          appId="502170539988549"
-          />
-       </div>
+      
     </div>
   );
 }
